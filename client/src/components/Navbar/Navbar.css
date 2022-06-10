@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #fff !important;
+}
+
+.navbar-brand {
+    font-size: 1.9rem !important;
+    color: #565387 !important;
+}
+
+.navbar a {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: #565387 !important;
+}
+
+.menu_active {
+    font-weight: bold;
+    border-bottom: 3px solid#191828;
+}
+
+.navbar a:hover {
+    color: #3498db !important;
+}
+
+.white_btn {
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	background-color: white;
+	border-radius: 20px;
+	width: 120px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin-right: 20px;
+}
