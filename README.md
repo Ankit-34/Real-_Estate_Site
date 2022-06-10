@@ -1,6 +1,10 @@
 # Real estate website
 
-real state site
+real state site using
+1. MongoDB
+2. Express
+3. ReactJs
+4. NodeJS 
 
 ## Getting started
 
