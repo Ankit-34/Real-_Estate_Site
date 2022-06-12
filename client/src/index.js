@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import LandPage from './components/Landing_Page/LandingPage';
-import Card from './components/Card/Card'
+import Card from './components/Card/Card';
 
 ReactDOM.render(    
     <>

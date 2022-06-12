@@ -19,7 +19,7 @@ code {
   box-sizing: border-box;
 }
 
-/* Landing Page CSS Starts*/
+/* ---------------- Landing Page CSS Starts ----------------*/
 .bg_img{
   height: 100vh;
   width: 100%;
@@ -153,7 +153,7 @@ code {
   font-size: 20px;
 }
 
-/* Landing Page CSS Over */
+/* ------------- Landing Page CSS Over -------------- */
 
 /* ----------------------------------------------------------------------------------------- */
 
@@ -198,7 +198,7 @@ code {
   margin: 2rem 5rem;
 }
 
-/* Card CSS Starts */
+/* ---------- Card CSS Starts ----------- */
 
 .main{
   width: 100%;
@@ -208,13 +208,10 @@ code {
 }
 
 .img .view_more{
-  /* content: 'View More'; */
   display: block;
   background-color: rgba(251, 251, 253, 0.6);
   border-radius: 3px;
-  /* background-color: rgba(97, 97, 98, 0.7); */
   color: rgba(0,0,255,0.7);
-  /* color: white; */
   text-align: center;
   width: fit-content;
   margin: 0px auto;
@@ -337,7 +334,7 @@ code {
   padding: 3px;
 }
 
-/* Card CSS Over */
+/* ---------- Card CSS Over ---------- */
 
 .space
 {
