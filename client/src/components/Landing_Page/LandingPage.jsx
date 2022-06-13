@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../Navbar/Navbar.jsx'
 
 const LandPage = () => {
     return<>
@@ -13,7 +13,6 @@ const LandPage = () => {
                 <button className='Btn'>Explore</button>
             </div>
         </div>
-
     </>
 }
 

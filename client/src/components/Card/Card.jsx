@@ -17,22 +17,22 @@ const Card = () => {
                 <hr />
                 <div class="data">
                     <div class="d">
-                        <img src={require('/client/src/Icon/icons8-empty-bed-50.png')} alt="" />
+                        <img src={require('../../Icon/icons8-empty-bed-50.png')} alt="" />
                         <p class="t">Bed</p>
                         <p class="digit">2</p>
                     </div>
                     <div class="d">
-                        <img src={require('/client/src/Icon/icons8-empty-bed-50.png')} alt="" />
+                        <img src={require('../../Icon/icons8-bath-48.png')} alt="" />
                         <p class="t">Bath</p>
                         <p class="digit">2</p>
                     </div>
                     <div class="d">
-                        <img src={require('/client/src/Icon/icons8-empty-bed-50.png')} alt="" />
+                        <img src={require('../../Icon/icons8-city-buildings-48.png')} alt="" />
                         <p class="t">Levels</p>
                         <p class="digit">2</p>
                     </div>
                     <div class="d">
-                        <img src={require('/client/src/Icon/icons8-empty-bed-50.png')} alt="" />
+                        <img src={require('../../Icon/icons8-surface-64.png')} alt="" />
                         <p class="t">Sqft</p>
                         <p class="digit">2</p>
                     </div>
