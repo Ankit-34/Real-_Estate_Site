@@ -10,6 +10,7 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -39,5 +40,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script>
+      $(document).ready(() => {
+        window.addEventListener('scroll', () => {
+          if(scrollY>340){
+            document.querySelector('.text_l1').classList.add("effect");
+            document.querySelector('.text_l2').classList.add("effect1");
+            document.querySelector('.view').classList.add("anim");
+          }
+          if(scrollY>740){
+            document.querySelector('.text_l1_').classList.add("effect_");
+            document.querySelector('.text_l2_').classList.add("effect1_");
+            document.querySelector('.view_').classList.add("anim_");
+          }
+          })
+      })
+    </script>
+
   </body>
 </html>
