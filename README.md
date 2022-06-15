@@ -1,6 +1,6 @@
-# Real estate website
+# Real Estate Website
 
-real state site using
+Real Estate Website using
 1. MongoDB
 2. Express
 3. ReactJs
