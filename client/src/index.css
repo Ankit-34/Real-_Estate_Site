@@ -19,14 +19,9 @@ code {
   box-sizing: border-box;
 }
 
-/* html{
-  width: 100;
-} */
-
-/* .root{
-  background-size: 100%;
-  height: 100%;
-}  */
+html{
+  scroll-behavior: smooth;
+}
 
 
 /* ---------------- Landing Page CSS Starts ----------------*/
@@ -47,9 +42,11 @@ code {
   background-color: rgba(52, 51, 51, 0.6);
   float: right;
   width: 100%;
+  height: 8%;
   position: fixed;
   z-index: 111;
   margin: 0px auto;
+  /* overflow: hidden; */
 }
 
 .list {
@@ -59,7 +56,7 @@ code {
   float: right;
 }
 
-.item {
+.item, .i1 {
   padding: 1rem;
   margin: .5rem;
   font-size: 1.2rem;
@@ -71,7 +68,7 @@ code {
   width: max-content;
 }
 
-.item::after {
+.item::after, .SubMenu::before {
   content: '';
   width: 100%;
   background-color: white;
@@ -85,10 +82,46 @@ code {
   transition: transform 0.5s ease-in-out;
 }
 
-.item:hover::after {
+.item:hover::after, .i1:hover .SubMenu::before {
   transform: scale(1);
   height: 3px;
 }
+
+.i1{
+  transition: all 2s ease;
+}
+
+.i1:hover .SubMenu{
+  display: block;
+  transform: translateY(18%);
+}
+
+.SubMenu{
+  display: block;
+  padding: 5px;
+  border: 2px solid grey;
+  outline: none;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  background-color: rgba(52, 51, 51, 0.6);
+  color: white;
+  list-style: none;
+  display: none;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.m1{
+  margin: 5px;
+  padding: 5px;
+}
+
+.m1:hover, .item:hover, .i1:hover{
+  cursor: pointer;
+}
+
+
 
 .Logo {
   color: white;
@@ -161,11 +194,6 @@ code {
   transition: all 0.4s ease-in;
 }
 
-/* .Btn a{
-  text-decoration: none;
-  color: white;
-} */
-
 .Btn:hover {
   cursor: pointer;
   background-color: rgb(10, 111, 252);
@@ -175,13 +203,6 @@ code {
 /* ------------- Landing Page CSS Over -------------- */
 
 /* ----------------------------------------------------------------------------------------- */
-
-/* .Main_header{ */
-/* background-image: linear-gradient(to left bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.9)) , url('https://img.freepik.com/free-vector/business-presentation-banner-with-blue-geometric-shape_1017-32330.jpg?t=st=1655151029~exp=1655151629~hmac=02c79e8e75f7423988a30c64e8103d460ec4cf52de90d9e1e9943934e7b99a98&w=1380');
-  background-repeat: no-repeat;
-  background-size: 100% 100%; */
-
-/* } */
 
 .back_shape_right,
 .back_shape_left {
@@ -202,9 +223,6 @@ code {
 
 .Header,
 .Header_ {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
   text-align: center;
   padding: 20px;
   z-index: 1;
@@ -212,58 +230,67 @@ code {
   transition: all 2s ease;
 }
 
-.text_l1,
-.text_l1_ {
+.l1,
+.l2 {
   text-align: center;
   font-size: 0px;
   letter-spacing: 3px;
   color: rgb(78, 77, 77);
-  margin-top: 15px;
-  /* background-image: linear-gradient(to bottom, rgba(19, 15, 249, 0.297), rgba(94, 95, 95, 0.7)), url('../src/Images/back_div_image.jpg'); */
-  /* background-color: rgba(2, 2, 247, 0.3); */
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-
   font-weight: 600;
-  width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  /* border: 2px solid green; */
   margin: 0 auto;
-
-  /* background-color: rgb(248, 5, 195); */
-  /* height: 400px; */
-  /* opacity: 0; */
 }
 
-.effect,
-.effect_ {
-  /* position: absolute;
-  left: 0; */
-  width: 30%;
-  /* height: 450px; */
+.l1_, .l2_{
+  font-size: 0px;
+  color: rgb(10, 38, 247);
+  /* width: 80%; */
+}
+
+.effect {
+  /* left: 0;  */
+  width: 40%;
   font-size: 26px;
-  font-size: 23px;
   transition: all 2s ease;
-  /* opacity: 1; */
 }
 
-.text_l2,
-.text_l2_ {
-  width: fit-content;
-  color: rgb(253, 5, 5);
+.effect1{
+  /* left: 0;  */
+  width: 40%;
+  font-size: 22px;
+  transition: all 2s ease;
+}
+
+.v1,
+.v2 {
+  display: block;
+  background-color: rgba(10, 38, 247, 0.9);
+  letter-spacing: 2px;
+  color: white;
   text-align: center;
-  font-weight: 1000;
-  /* font-size: 23px; */
-  letter-spacing: 3px;
-  margin-top: 15px;
+  width: fit-content;
+  margin: 0px auto;
+  position: relative;
+  padding: 10px;
+  transition: background-color 0.5s ease-in-out, opacity 3s ease-in-out;
+  border: none;
+  width: 15%;
+  font-size: 18px;
+  opacity: 0;
 }
 
-.text_l1:hover,
-.text_l1_:hover {
-  text-shadow: 1px 1px 1px black;
+.v1:hover,
+.v2:hover {
+  background-color: rgba(2, 2, 247, 0.7);
+}
+
+.anim {
+  opacity: 1;
 }
 
 .parent,
@@ -289,9 +316,6 @@ code {
   width: 100%;
   height: fit-content;
   transition: all 1s;
-  /* border: 1px solid gray; */
-  /* background: rgba(66, 129, 245, 0.3); */
-  /* padding: 5px; */
 }
 
 .main:hover {
@@ -386,49 +410,8 @@ code {
 /* ---------- Card CSS Over ---------- */
 
 .space {
-  /* margin-top: 30px; */
   padding: 40px;
 }
-
-.view,
-.view_ {
-  display: block;
-  background-color: rgba(10, 38, 247, 0.9);
-  letter-spacing: 2px;
-  color: white;
-  text-align: center;
-  width: fit-content;
-  margin: 0px auto;
-  position: relative;
-  padding: 10px;
-  transition: background-color 0.5s ease-in-out, opacity 3s ease-in-out;
-  border: none;
-  width: 15%;
-  font-size: 18px;
-  opacity: 0;
-}
-
-.view:hover,
-.view_:hover {
-  background-color: rgba(2, 2, 247, 0.7);
-}
-
-.anim,
-.anim_ {
-  opacity: 1;
-}
-
-/* .Footer{
-  margin-top: 30px;
-  width: 100%;
-  height: 40vh;
-  background: url(https://picsum.photos/200/300);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  text-align: center;
-  font-size: 25px;
-} */
 
 
 /* ------------------------ Feedback Carousel CSS Starts ------------------------  */
@@ -441,12 +424,10 @@ code {
   width: 100%;
   height: 100%;
   position: relative;
-  /* border: 2px solid green; */
   padding: 20px;
-
   height: 60vh;
   width: 100%;
-  background-image: url('https://www.bergerpaints.com/blog/wp-content/uploads/2019/05/maintaining_interior_paint.png');
+  background-image: linear-gradient(to bottom, rgba(112, 112, 113,0.3), rgba(50, 50, 51, 0.9)), url('https://www.bergerpaints.com/blog/wp-content/uploads/2019/05/maintaining_interior_paint.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -456,109 +437,56 @@ code {
 
 .feedback {
   color: rgb(249, 249, 250);
-  /* width: 100%; */
   text-align: center;
   font-size: 25px;
   letter-spacing: 3px;
   font-weight: 900;
-  /* background-color: red; */
-  /* border: 6px solid green; */
-  /* margin-bottom: 40px; */
 }
 
 .carousel_inner {
   width: 100%;
   height: 100%;
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 40%); */
   display: flex;
   margin-top: 30px;
 }
 
-.parent_rev {
-  /* transform: translateY(-25%); */
-  width: 50%;
-  height: 100%;
-  height: fit-content;
-}
-
-.first_rev,
-.second_rev,
-.thired_rev,
-.fourth_rev {
-  /* border: 2px solid red; */
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-  /* margin: 20px; */
-}
-
-.second_rev,
-.thired_rev {
-  width: 100%;
-  height: 100%;
-  /* margin: 20px; */
-}
-
-/* 
-.first_rev,
-.fourth_rev {
-  background-image: linear-gradient(to left bottom, rgba(255, 255, 255, 0.4), rgba(9, 9, 9, 1)), url('./Images/P4.jpg');
-  border-radius: 20%;
-  background-size: 100% 100%;
-  padding: 10px;
-  text-align: center;
-  width: 85%;
-  height: 400px;
-  margin: 20px;
-} */
-
 .second_rev,
 .thired_rev,
 .first_rev {
-  /* background-image: linear-gradient(to left bottom, rgba(255, 255, 255, 0.4), rgba(9, 9, 9, 1)), url('./Images/P4.jpg'); */
-  background: linear-gradient(to bottom, rgba(227, 227, 230, 0.2), rgba(71, 71, 72,0.3));
-  /* border-radius: 10px; */
+  background: linear-gradient(to bottom, rgba(38, 38, 39, 0.5), rgba(13, 13, 13, 0.6));
   background-size: 100% 100%;
   padding: 10px;
   text-align: center;
   width: 85%;
-  height: 300px;
+  height: 325px;
   margin: 20px;
-  /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+  letter-spacing: 2px;
+  font-size: smaller;
 }
 
-.first_rev:hover .first_rev{
-  background-color: rgb(61, 20, 20);
-  z-index: 1;
-  /* font-size: 30px; */
+.first_rev div,
+.second_rev div,
+.thired_rev div{
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  height: 100px;
+  width: 30%;
+  margin: 0 auto;
 }
 
 .pic {
-  width: 26%;
-  clip-path: circle(50% at 50% 50%);
-  /* background-color: red; */
-  height: 35%;
-  border-radius: 50%;
-  margin-top: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .para {
   color: white;
-  /* padding: 10px; */
   transform: translateY(30%);
   text-align: center;
   font-size: 18px;
 }
 
 .user_name{
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 23px;
   font-weight: 900;
 }
-
-/* .fourth_rev{
-  margin-left: 60px;
-} */

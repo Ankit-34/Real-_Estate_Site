@@ -5,7 +5,6 @@ const Card = () => {
         <div class="main">
             <div class="img">
                 <img src="https://cdn.britannica.com/05/157305-004-53D5D212.jpg" alt="" />
-                {/* <button className='view_more'> View More </button> */}
             </div>
 
             
@@ -37,7 +36,6 @@ const Card = () => {
                         <p class="digit">2</p>
                     </div>
                 </div>
-                {/* <button className='view_more_2'> View More </button> */}
 
             </div>
         </div>

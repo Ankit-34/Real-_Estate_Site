@@ -5,7 +5,13 @@ const Navbar = () => {
         <div className='navBar'>
             <ul className='list'>
                 <li className='item'>Home</li>
-                <li className='item'>Properties</li>
+                <li className='i1'>
+                    Properties
+                    <ul className='SubMenu'>
+                        <li className='m1'>BUY</li>
+                        <li className='m1'>RENT</li>
+                    </ul>
+                </li>
                 <li className='item'>Contact Us</li>
                 <li className='item'>About Us</li>
                 <li className='item'>Login</li>
