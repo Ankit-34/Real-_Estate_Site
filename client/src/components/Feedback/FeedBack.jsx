@@ -1,5 +1,5 @@
 import React from "react";
-import User from '../../Images/pexels-ali-pazani-2777898.jpg';
+import User from '../../Images/person.jpg';
 
 const FeedBack = (props) => {
     return <>

@@ -1,68 +1,49 @@
-import React from "react";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { NavLink } from "react-router-dom";
-import './Navbar.css';
+// import React from 'react';
+import { NavLink } from 'react-router-dom';
+import "../../App.css"
 
-const Navbar = () => {
-
-    const handleLogout = () => {
-		localStorage.removeItem("token");
-		window.location.reload();
-	};
-
+function Navbar(props) {
     return (
         <>
-            <div className="container-fluid nav_bg">
+            <div className='navBar'>
+                <ul class="list">
 
-                <div className="row">
-                    <div className="col-10 mx-auto">
+                    <li class="item">
+                        <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
+                    </li>
 
-                        <nav class="navbar navbar-dark navbar-expand-lg">
-                            <div class="container-fluid">
+                    <li class="item">
+                        <NavLink className="nav-link" to="/about">About</NavLink>
+                    </li>
 
-                                {/* <a class="navbar-brand" href="#">greenLand.com</a> */}
+                    <li class="item">
+                        <NavLink className="nav-link" to="/services">Services</NavLink>
+                    </li>
 
-                                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+                    <li class="item">
+                        <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                    </li>
 
+                    {
+                        props.auth ?
+                            <>
+                                <li class="item">
+                                    <NavLink className="nav-link" to="/login">Login</NavLink>
+                                </li>
 
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            </> : <>
 
-                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="item">
+                                    <NavLink className="nav-link" to="/logout">Logout</NavLink>
+                                </li>
+                            </>
+                    }
 
-                                        <li class="nav-item">
-                                            <NavLink exact className="nav-link active" aria-current="page" to="/home">Home</NavLink>
-                                        </li>
+                </ul>
 
-                                        <li class="nav-item">
-                                            <NavLink exact className="nav-link active" aria-current="page" to="/contact">Contact</NavLink>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <NavLink exact className="nav-link active" aria-current="page" to="/about">About</NavLink>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <NavLink exact className="nav-link active" aria-current="page" to="/login">Login</NavLink>
-                                        </li>
-
-                                        <button className="btn btn-outline-primary" onClick={handleLogout}>
-                                            Logout
-                                        </button>
-
-                                    </ul>
-
-                                </div>
-
-                            </div>
-                        </nav>
-
-                    </div>
-                </div>
-            </div >
+            </div>
         </>
-    )
+    );
 }
 
 export default Navbar;

@@ -4,7 +4,7 @@ import web from "../../Images/Main.png"
 const Home = () => {
     return (
         <>
-            <section id="header" className="d-flex align-items-center">
+            {/* <section id="header" className="d-flex align-items-center">
                 <div className="container-fluid nav_bg">
 
                     <div className="row">
@@ -30,7 +30,16 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+            <div className='bg_img'>
+
+                <div className='Center'>
+                    <p className='Title'>Your <span className='s'>Dream</span> Home</p>
+                    <p className='Title1'>Is Waiting For You!</p>
+                    <button className='Btn'>Explore</button>
+                </div>
+            </div>
 
         </>
     );
