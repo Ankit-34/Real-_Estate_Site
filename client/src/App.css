@@ -47,7 +47,8 @@ code {
   background-color: rgba(52, 51, 51, 0.6);
   float: right;
   width: 100%;
-  position: relative;
+  height: 8%;
+  position: fixed;
   z-index: 111;
   margin: 0px auto;
 }
@@ -55,27 +56,28 @@ code {
 .list {
   display: flex;
   list-style: none;
-  /* opacity: 1; */
   float: right;
+  margin-bottom: -.1px;
 }
 
-.item {
+.i, .i1 {
   padding: 1rem;
-  margin: .5rem;
+  margin: .3rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: white;
+  color: white !important;
   position: relative;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
   letter-spacing: 1.5px;
   width: max-content;
 }
 
-.item::after {
+.i::after {
   content: '';
-  width: 100%;
+  width: 80%;
   background-color: white;
   position: absolute;
+  margin: 0px auto;
   bottom: 0;
   left: 0;
   right: 0;
@@ -85,10 +87,45 @@ code {
   transition: transform 0.5s ease-in-out;
 }
 
-.item:hover::after {
+.i:hover::after, .i1:hover .SubMenu::before {
   transform: scale(1);
   height: 3px;
 }
+
+.i1{
+  transition: all 2s ease;
+}
+
+.i1:hover .SubMenu{
+  display: block;
+  transform: translateY(20%);
+}
+
+.SubMenu{
+  display: block;
+  padding: 5px;
+  border: 2px solid grey;
+  outline: none;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  background-color: rgba(52, 51, 51, 0.6);
+  color: white;
+  list-style: none;
+  display: none;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.m1{
+  margin: 5px;
+  padding: 5px;
+}
+
+.m1:hover, .item:hover, .i1:hover{
+  cursor: pointer;
+  color: rgba(241, 240, 240,0.7);
+}
+
 
 .Logo {
   color: white;
@@ -124,7 +161,6 @@ code {
 }
 
 .s {
-  /* overflow: hidden; */
   display: inline-block;
   transition: transform 1s ease-in-out;
 }
@@ -141,13 +177,13 @@ code {
 }
 
 .Title1 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 10px;
   color: white;
 }
 
 .Btn {
-  margin-top: 2rem;
+  margin-top: 1rem;
   justify-content: center;
   width: 8rem;
   height: 3rem;
@@ -212,58 +248,65 @@ code {
   transition: all 2s ease;
 }
 
-.text_l1,
-.text_l1_ {
+.l1,
+.l2 {
   text-align: center;
   font-size: 0px;
   letter-spacing: 3px;
   color: rgb(78, 77, 77);
-  margin-top: 15px;
-  /* background-image: linear-gradient(to bottom, rgba(19, 15, 249, 0.297), rgba(94, 95, 95, 0.7)), url('../src/Images/back_div_image.jpg'); */
-  /* background-color: rgba(2, 2, 247, 0.3); */
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-
   font-weight: 600;
-  width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  /* border: 2px solid green; */
   margin: 0 auto;
-
-  /* background-color: rgb(248, 5, 195); */
-  /* height: 400px; */
-  /* opacity: 0; */
 }
 
-.effect,
-.effect_ {
-  /* position: absolute;
-  left: 0; */
-  width: 30%;
-  /* height: 450px; */
+.l1_, .l2_{
+  font-size: 0px;
+  color: rgb(10, 38, 247);
+  /* width: 80%; */
+}
+
+.effect {
+  width: 40%;
   font-size: 26px;
-  font-size: 23px;
   transition: all 2s ease;
-  /* opacity: 1; */
 }
 
-.text_l2,
-.text_l2_ {
-  width: fit-content;
-  color: rgb(253, 5, 5);
+.effect1{
+  width: 40%;
+  font-size: 22px;
+  transition: all 2s ease;
+}
+
+.v1,
+.v2 {
+  display: block;
+  background-color: rgba(10, 38, 247, 0.9);
+  letter-spacing: 2px;
+  color: white;
   text-align: center;
-  font-weight: 1000;
-  /* font-size: 23px; */
-  letter-spacing: 3px;
-  margin-top: 15px;
+  width: fit-content;
+  margin: 0px auto;
+  position: relative;
+  padding: 10px;
+  transition: background-color 0.5s ease-in-out, opacity 3s ease-in-out;
+  border: none;
+  width: 15%;
+  font-size: 18px;
+  opacity: 0;
 }
 
-.text_l1:hover,
-.text_l1_:hover {
-  text-shadow: 1px 1px 1px black;
+.v1:hover,
+.v2:hover {
+  background-color: rgba(2, 2, 247, 0.7);
+}
+
+.anim {
+  opacity: 1;
 }
 
 .parent,
@@ -283,15 +326,15 @@ code {
   margin: 2rem 2rem;
 }
 
+
 /* ---------- Card CSS Starts ----------- */
 
 .main {
-  width: 100%;
+  width: 85%;
   height: fit-content;
   transition: all 1s;
-  /* border: 1px solid gray; */
-  /* background: rgba(66, 129, 245, 0.3); */
-  /* padding: 5px; */
+  margin: 0px auto;
+  background-color: white;
 }
 
 .main:hover {
@@ -438,127 +481,104 @@ code {
 
 
 .carousel_outer {
-  width: 100%;
-  height: 100%;
   position: relative;
-  /* border: 2px solid green; */
   padding: 20px;
-
-  height: 60vh;
+  height: 70vh;
   width: 100%;
-  background-image: url('https://www.bergerpaints.com/blog/wp-content/uploads/2019/05/maintaining_interior_paint.png');
+  background-image: url('https://www.nobroker.in/blog/wp-content/uploads/2022/02/Duplex-house-of-Living-room-and-kitchen.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
 }
 
 .feedback {
   color: rgb(249, 249, 250);
-  /* width: 100%; */
   text-align: center;
-  font-size: 25px;
-  letter-spacing: 3px;
+  font-size: 26px;
+  letter-spacing: 5px;
   font-weight: 900;
-  /* background-color: red; */
-  /* border: 6px solid green; */
-  /* margin-bottom: 40px; */
 }
 
 .carousel_inner {
   width: 100%;
-  height: 100%;
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 40%); */
+  height: fit-content;
   display: flex;
   margin-top: 30px;
 }
 
-.parent_rev {
-  /* transform: translateY(-25%); */
-  width: 50%;
-  height: 100%;
-  height: fit-content;
-}
-
-.first_rev,
-.second_rev,
-.thired_rev,
-.fourth_rev {
-  /* border: 2px solid red; */
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-  /* margin: 20px; */
-}
-
-.second_rev,
-.thired_rev {
-  width: 100%;
-  height: 100%;
-  /* margin: 20px; */
-}
-
-/* 
-.first_rev,
-.fourth_rev {
-  background-image: linear-gradient(to left bottom, rgba(255, 255, 255, 0.4), rgba(9, 9, 9, 1)), url('./Images/P4.jpg');
-  border-radius: 20%;
-  background-size: 100% 100%;
-  padding: 10px;
-  text-align: center;
-  width: 85%;
-  height: 400px;
-  margin: 20px;
-} */
-
 .second_rev,
 .thired_rev,
 .first_rev {
-  /* background-image: linear-gradient(to left bottom, rgba(255, 255, 255, 0.4), rgba(9, 9, 9, 1)), url('./Images/P4.jpg'); */
-  background: linear-gradient(to bottom, rgba(227, 227, 230, 0.2), rgba(71, 71, 72,0.3));
-  /* border-radius: 10px; */
+  background: linear-gradient(to bottom, rgba(38, 38, 39, 0.5), rgba(13, 13, 13, 0.6));
   background-size: 100% 100%;
   padding: 10px;
+  /* padding-bottom: 10px; */
   text-align: center;
-  width: 85%;
-  height: 300px;
-  margin: 20px;
-  /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+  width: 50%;
+  height: 340px;
+  margin: 30px;
+  letter-spacing: 2px;
+  font-size: smaller;
 }
 
-.first_rev:hover .first_rev{
-  background-color: rgb(61, 20, 20);
-  z-index: 1;
-  /* font-size: 30px; */
+.first_rev div,
+.second_rev div,
+.thired_rev div{
+  height: 100px;
+  width: 30%;
+  margin: 5px auto;
 }
 
 .pic {
-  width: 26%;
-  clip-path: circle(50% at 50% 50%);
-  /* background-color: red; */
-  height: 35%;
+  width: 90%;
   border-radius: 50%;
-  margin-top: 10px;
+  height: 100%;
 }
 
 .para {
   color: white;
-  /* padding: 10px; */
-  transform: translateY(30%);
+  transform: translateY(8%);
   text-align: center;
   font-size: 18px;
 }
 
 .user_name{
-  margin-top: 15px;
   font-size: 23px;
   font-weight: 900;
 }
 
-/* .fourth_rev{
-  margin-left: 60px;
-} */
+/* Footer CSS Starts */
+
+.Footer{
+  /* background: linear-gradient(to right, rgb(16, 183, 254), rgb(171, 223, 247)); */
+  /* background: rgba(0, 0, 0, 0.5); */
+  background-image: linear-gradient(to right bottom, rgba(49, 49, 49, 0.4), rgba(49, 49, 49, 0.4)) , url('https://media.istockphoto.com/photos/luxurious-beautiful-modern-villa-with-front-yard-garden-at-sunset-picture-id1283532082?b=1&k=20&m=1283532082&s=170667a&w=0&h=KxQ3cfMs-Xi7FL2TXfrgFbi9pwtBOdjSEc4-ufAeVlo=');
+  /* background-position: center; */
+  background-size: 100% 50%;
+  width: 100%;
+  height: 350px;
+  background-attachment: fixed;
+  /* color: white; */
+}
+
+.footer_image{
+  /* background-color: red; */
+  width: max-content;
+  height: 100%;
+  float: right;
+  transform: translate(-10%,-15%);
+  /* z-index: -1; */
+}
+
+.footer_image img{
+  width: 100%;
+  height: 50%;
+  /* z-index: -1; */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 55% 75%, 31% 100%, 31% 75%, 0% 75%);
+  transition: clip-path 1s ease-in-out;
+}
+
+.footer_image img:hover{
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%,0 0,0 0,0 0);
+}

@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
-import Reviews from "../Reviews/Reviews";
-import Main from '../Main';
-import FeedBack from '../Feedback/Feedback';
+// import Navbar from '../Navbar/Navbar';
+// import Reviews from "../Reviews/Reviews";
+import Main from '../Main/Main';
+import FeedBack from '../Feedback/FeedBack';
 import "../../App.css"
 
 const LandPage = () => {

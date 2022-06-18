@@ -6,7 +6,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Logout from './components/Logout/Logout';
-import Details from "./components/Details/Details"
+import Details from "./components/Details/Details";
 
 
 function App() {
