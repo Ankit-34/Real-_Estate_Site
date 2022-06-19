@@ -3,7 +3,8 @@ import React from 'react';
 // import Reviews from "../Reviews/Reviews";
 import Main from '../Main/Main';
 import FeedBack from '../Feedback/FeedBack';
-import "../../App.css"
+import "../../App.css";
+import Footer from '../Footer/Footer_page';
 
 const LandPage = () => {
     return (
@@ -34,6 +35,7 @@ const LandPage = () => {
             <p className='space'></p>
 
             <section id="reviews">
+                        {/* <div className='back_shape_right'></div> */}
                 <div className='carousel_outer'>
                     <p className='feedback'> What our clients says... </p>
                     <div className='carousel_inner'>
@@ -41,11 +43,14 @@ const LandPage = () => {
                         <FeedBack name="Username 1" />
                         <FeedBack name="Username 2" />
                         <FeedBack name="Username 3" />
-                        <div className='back_shape_right'></div>
 
                     </div>
                 </div>
             </section>
+
+            <p className='space'></p>
+
+            <Footer />
 
 
         </div>
