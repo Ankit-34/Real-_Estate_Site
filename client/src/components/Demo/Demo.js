@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import "./Login.css"
+// import "./Login.css"
 
 const Login = () => {
 
@@ -49,22 +49,18 @@ const Login = () => {
 	}
 
 	return (
-		<>
-	
-		<div className="shape_up"></div>
-
 		<div className="Outer">
 			<div className="Inner">
-				<h1 className="cl">Login</h1>
+				<h1 className="text-center cl">Login</h1>
 			</div>
 
-			<div className="contactDiv">
-				<div className="Row">
-					<div className="loginStyle">
-						<form onSubmit={handleSubmit} className="formContainer">
-							<div className="input_div1">
+			<div className="container contact_div">
+				<div className="row">
+					<div className="col-md-6 col-10 mx-auto login-style">
+						<form onSubmit={handleSubmit} className="form_container">
+							<div class="mb-3">
 
-								<label for="exampleInputEmail1" class="formLabel">
+								<label for="exampleInputEmail1" class="form-label">
 									Email address
 								</label>
 
@@ -76,14 +72,13 @@ const Login = () => {
 									required
 									value={user.email}
 									onChange={handleChange}
-									placeholder="E-mail"
 								/>
 
 							</div>
 
-							<div className="input_div2">
+							<div class="mb-3">
 
-								<label for="exampleInputPassword1" class="formLabel">Password</label>
+								<label for="exampleInputPassword1" class="form-label">Password</label>
 
 								<input
 									type="password"
@@ -93,30 +88,25 @@ const Login = () => {
 									required
 									value={user.password}
 									onChange={handleChange}
-									placeholder="Password"
 								/>
 
 							</div>
-						<div className="login_out">
-							<button type="submit" className="loginB">
+
+							<button type="submit" class="btn btn-dark">
 								Login
 							</button>
-						</div>
 
 						</form>
 
-						<div className="ask">
-							<h5 className="">Don't have account ?</h5>
-							<NavLink className="reg" aria-current="page" to="/register">Register</NavLink>
+						<div className="">
+							<h5 className="btn-pad">Don't have account ?</h5>
+							<NavLink className="btn btn-dark mt-3" aria-current="page" to="/register">Register</NavLink>
 						</div>
 					</div>
 
 				</div>
 			</div>
 		</div>
-
-		<div className="shape_down"></div>
-		</>
 	)
 }
 
