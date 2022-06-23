@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import "./Register.css"
+// import "./Register.css"
 const Register = () => {
 
 	const navigate = useNavigate();
@@ -49,14 +49,21 @@ const Register = () => {
 
 
 	return (
-		<div>
-			<div className="container contact_div">
-				<div className="row">
-					<div className="col-md-6 col-10 mx-auto">
+		<>
+			<div className="shape_up"></div>
 
-						<form onSubmit={handleSubmit} method="POST" className="form_container">
+			<div className="register_outer">
+				<div className="register_inner">
 
-							<div class="mb-3">
+					<div className="title_SignUp">
+						<h1>Sign Up</h1>
+					</div>
+
+					<div className="form_div">
+
+						<form onSubmit={handleSubmit} method="POST" className="formContainer">
+
+							<div className="r_name">
 								<label >
 									Name
 								</label>
@@ -71,7 +78,7 @@ const Register = () => {
 								/>
 							</div>
 
-							<div class="mb-3">
+							<div className="r_email">
 								<label >Email address</label>
 								<input
 									type="email"
@@ -84,7 +91,7 @@ const Register = () => {
 								/>
 							</div>
 
-							<div class="mb-3">
+							<div className="r_password">
 								<label>Password</label>
 								<input
 									type="password"
@@ -97,13 +104,15 @@ const Register = () => {
 								/>
 							</div>
 
-							<button type="submit" class="btn btn-dark">Register</button>
+							<div className="registerD">
+							<button type="submit" className="registerB">Register</button>
+							</div>
 						</form>
 
-						<div className="text-center">
+						<div className="backToLogin">
 
-							<h5 className="btn-pad">already have account ?</h5>
-							<a href="/Login" className="btn btn-outline-primary mt-3">Login</a>
+							<h4 className="btn-pad">Already have account ?</h4>
+							<a href="/Login">Login</a>
 
 						</div>
 					</div>
@@ -111,7 +120,10 @@ const Register = () => {
 
 
 			</div>
-		</div>
+
+			<div className="shape_down"></div>
+
+		</>
 	)
 }
 

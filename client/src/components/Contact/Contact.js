@@ -23,19 +23,20 @@ const Contact = () => {
     alert(`My Name is ${data.fullname}. My email is ${data.email}. My message is ${data.msg}`);
   };
 
+  // document.getElementById('con').classList.add("con2");
+
   return (
     <>
-      <div className="my-5">
-        <h1 className="text-center">Contact Us</h1>
+      <div className="back_image">
+        <h1 className="">Contact Us</h1>
       </div>
-      <div className="container contact_div">
-        <div className="row">
-          <div className="col-md-6 col-10 mx-auto">
+      <div className="contact_outer">
+          <div className="contact_inner">
 
             <form  onSubmit={formSubmit} > 
 
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Name</label>
+              <div className="contact_name">
+                <label for="exampleInputEmail1" class="">Name</label>
                 <input
                   type="text"
                   class="form-control"
@@ -47,8 +48,8 @@ const Contact = () => {
                 />
               </div>
 
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <div className="contact_email">
+                <label for="exampleInputEmail1" class="">Email address</label>
                 <input
                   type="email"
                   class="form-control"
@@ -60,8 +61,8 @@ const Contact = () => {
                 />
               </div>
 
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+              <div className="contact_message">
+                <label for="exampleFormControlTextarea1">Message</label>
                 <textarea
                   class="form-control"
                   id="exampleFormControlTextarea1"
@@ -75,10 +76,11 @@ const Contact = () => {
                 </textarea>
               </div>
 
-              <button type="submit" class="btn btn-outline-primary">Submit</button>
+              <div className="submitDiv">
+                <button type="submit" className="contact_submit">Submit</button>
+              </div>
             </form>
           </div>
-        </div>
       </div>
     </>
   );

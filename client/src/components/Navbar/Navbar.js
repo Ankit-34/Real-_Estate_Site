@@ -28,7 +28,7 @@ function Navbar(props) {
                     {/* </li> */}
 
                     {/* <li class="item"> */}
-                        <NavLink className="nav-link i" to="/contact">Contact Us</NavLink>
+                        <NavLink className="nav-link i" to="/contact" id="con">Contact Us</NavLink>
                     {/* </li> */}
 
                     {
