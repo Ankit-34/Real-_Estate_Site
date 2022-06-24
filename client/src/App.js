@@ -7,8 +7,8 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Logout from './components/Logout/Logout';
 import Details from "./components/Details/Details";
-// import Demo from './components/Demo/Demo';
 import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 
 function App() {
 
@@ -52,6 +52,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LandPage />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/about" element={<About />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/logout" element={<Logout/>}/>
